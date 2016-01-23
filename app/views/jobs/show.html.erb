@@ -1,7 +1,7 @@
 <div id="jobs">
   <div class="job">
     <h2><%= @job.title %></h2>
-    <p><%= @job.created_at %></p>
+    <p><%= @job.created_at.strftime("%b %d") %></p>
     <p><%= @job.location %></p>
     <p><%= @job.description.html_safe %></p>
     <p><%= @job.how_to_apply.html_safe %></p>
