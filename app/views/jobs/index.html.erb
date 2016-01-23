@@ -2,6 +2,7 @@
   <% @jobs.each do |job| %>
     <div class="">
       <h2><%= link_to job.title, job %></h2>
+      <p><%= job.created_at.strftime("%b %d") %></p>
       <p><%= job.company %></p>
       <p><%= job.location %></p>
     </div>
