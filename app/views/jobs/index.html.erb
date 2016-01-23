@@ -1,12 +1,9 @@
-<div id="jobs">
+<div class="">
   <% @jobs.each do |job| %>
-    <div class="job">
-      <h2>
-        <%= link_to job.title, job %>
-      </h2>
-      <p>
-        <%= job.company %>
-      </p>
+    <div class="">
+      <h2><%= link_to job.title, job %></h2>
+      <p><%= job.company %></p>
+      <p><%= job.location %></p>
     </div>
   <% end %>
-</div>
+</div><!-- .row -->
