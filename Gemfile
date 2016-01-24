@@ -15,6 +15,7 @@ gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'bootsy', '~> 2.2', '>= 2.2.1'
 gem 'devise', '~> 3.5', '>= 3.5.5'
+gem 'rails_admin', '~> 0.8.1'
 
 group :development, :test do
   gem 'byebug'
