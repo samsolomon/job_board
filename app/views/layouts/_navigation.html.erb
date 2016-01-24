@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-brand"><%= link_to "Security Jobs", root_path %></div>
+    <ul class="nav navbar-nav">
+      <li><%= link_to "All Jobs", root_path %></li>
+        <% Category.all.each do |category| %>
+        <li><%= link_to category.name, jobs_path(category: category.name) %></li>
+      <% end %>
+    </ul>
+
+    <ul class="">
+    <% if signed_in? %>
+      <%= link_to "New Job", new_job_path, class: "navbar-text navbar-right navbar-link" %>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'navbar-text navbar-right navbar-link' %>
+    <% else %>
+      <%= link_to 'Sign In', new_user_session_path, class: "navbar-text navbar-right navbar-link" %></li>
+      <%= link_to 'Sign Up', new_user_registration_path, class: "navbar-text navbar-right navbar-link" %></li>
+    <% end %>
+  </div>
+</nav>

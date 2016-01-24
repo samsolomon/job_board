@@ -1,0 +1,17 @@
+<% if flash[:alert] %>
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <div class="container">
+      <strong>Warning!</strong> <%= flash[:alert].html_safe %>
+    </div>
+  </div>
+<% else %>
+  <% flash.each do |key, value| %>
+    <% unless value.blank? %>
+      <div class="alert alert-info alert-dismissible" role="alert">
+        <div class="container">
+          <%= value.html_safe %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
