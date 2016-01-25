@@ -11,10 +11,10 @@
     <ul class="nav navbar-nav navbar-right">
     <% if signed_in? %>
       <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'navbar-text navbar-link' %>
-      <%= link_to "Post New Job", new_job_path, class: "btn btn-primary navbar-btn" %>
+      <%= link_to "Post A Job", new_job_path, class: "btn btn-primary navbar-btn" %>
     <% else %>
       <%= link_to 'Sign In', new_user_session_path, class: "navbar-text navbar-link" %>
-      <%= link_to 'Post New Job', new_user_registration_path, class: "btn btn-primary navbar-btn" %>
+      <%= link_to 'Post A Job', new_user_registration_path, class: "btn btn-primary navbar-btn" %>
     <% end %>
     </ul>
   </div>
